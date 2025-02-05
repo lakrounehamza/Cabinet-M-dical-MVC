@@ -1,0 +1,29 @@
+<?php  
+class  Database {
+    private  ?Database  $instance= null;
+    private ?PDO $connect; 
+    public function   __construct(){
+        try{
+            $con =  new  PDO("pgsql:host=localhost;port=5432;dbname=cabinetMvc", "root", "12345");
+
+            if(!$con){
+                throw new PDOException();
+            }
+            $connect = $con;
+        }catch(PDOException   $e){
+            $mess = 'erreur de configuration : ' . $e->getMessage();
+            die($mess);
+        }
+    }
+    public function  getConnect(){
+        return $this->connect;
+    }
+    public static function getInstance() {
+        if (self::$instance === null) {
+            self::$instance = new Database();
+        }
+        return self::$instance->getConnect(); 
+    }
+}
+
+?>
