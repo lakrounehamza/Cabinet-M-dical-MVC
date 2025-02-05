@@ -1,14 +1,7 @@
-
 <?php
-// require_once './../Model/User.php';
-// require_once '../../Core/Database.php';
-class Medecin{
+namespace app\models;
+class Medecin extends \app\models\User{
 
-    
-
-   
- 
-
-    
 }
- 
+
+?>
