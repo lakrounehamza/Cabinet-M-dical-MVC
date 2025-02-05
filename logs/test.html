@@ -1,0 +1,126 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    tr {
+        border: solid 2px;
+    }
+    td{
+        border: solid 2px;
+    }
+</style>
+<div class="">
+    <table>
+        <thead>
+            <tr style=" border :  solid ; " class="bg-gray-300">
+                <td style=" border :  solid ; " class="w-[100px] ">
+                    Lundi
+                </td>
+                <td style=" border :  solid ; " class="w-[100px]">
+                    Mardi
+                </td>
+                <td style=" border :  solid ; " class="w-[100px]">
+                    Mercredi
+                </td>
+                <td style=" border :  solid ; " class="w-[100px]">
+                    Jeudi
+                </td>
+                <td style=" border :  solid ; " class="w-[100px]">
+                    Vendredi
+                </td>
+                <td style=" border :  solid ; " class="w-[100px]">
+                    Samedi
+                </td>
+                <td>
+                    Dimanche
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id ="date">
+                    1
+                </td>
+                <td id ="day">
+                    2
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    2
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    2
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    2
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    2
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script >
+    let = date = new Date();
+    document.getElementById('date').innerText =  date;
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    document.getElementById('day').innerText =  daysInMonth;
+</script>
