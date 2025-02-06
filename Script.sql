@@ -18,7 +18,7 @@ create table if not exists patient(
     ban  int not null check(ban in (0,1)),
     constraint fk_patient foreign key (id)  references "user"(id)
 );
-create type  enum_statut as  enum ('acsupte','confirme');
+create type  enum_statut as  enum ('acsupte','anulle');
 create table if not exists rendezvous(
     id int primary key  ,
     statut enum_statut not null,
