@@ -1,18 +1,16 @@
-<?php 
-namespace config;
-use exeption\ExceptionConfig ;
-use PDO;
+<?php
+require_once(__DIR__ . '/../exception/ExceptionConfig.php');
 class  Database {
-    private  ?Database  $instance= null;
+    private static ?Database $instance = null;
     private ?PDO $connect; 
     public function   __construct(){
         try{
-            $con =  new  PDO("pgsql:host=localhost;port=5432;dbname=cabinetMvc", "postgres", "lakroune");
+            $con =  new  PDO("pgsql:host=localhost;port=5432;dbname=cabenit", "postgres", "lakroune");
 
             if(!$con){
                 throw new ExceptionConfig ("erreur de configuration");
             }
-            $connect = $con;
+            $this->connect = $con;
         }catch(ExceptionConfig   $e){
             $mess = 'erreur : ' . $e->getMessage();
             die($mess);
@@ -22,10 +20,13 @@ class  Database {
         return $this->connect;
     }
     public static function getInstance() {
-        if (self::$instance === null) {
+        if (self::$instance == null) {
             self::$instance = new Database();
         }
-        return self::$instance->getConnect(); 
+        return self::$instance; 
     }
 }
-?>
+
+$c =  new Database();
+Database::getInstance();
+$c->getConnect();

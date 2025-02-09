@@ -10,7 +10,7 @@
   <div class="max-w-lg mx-auto shadow px-6 py-7 rounded overflow-hidden">
     <h2 class="text-2xl uppercase font-medium mb-1">Login</h2>
     <p class="text-gray-600 mb-6 text-sm">Welcome! So good to have you back!</p>
-    <form autocomplete="off">
+    <form autocomplete="off" action = ''  method="POST">
       <p class="text-red-500"></p>
       <div class="space-y-2">
         <div><label for="email" class="text-gray-600 mb-2 block"></label>Email address<input type="email" name="email" id="email" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-teal-500 placeholder-gray-400" placeholder="youremail.@domain.com">
@@ -32,10 +32,10 @@
         </div>
       </div>
       <div class="mt-4">
-        <button type="submit" class="block w-full py-2 text-center text-white bg-teal-500 border border-teal-500 rounded hover:bg-transparent hover:text-teal-500 transition uppercase font-roboto font-medium">Login</button>
+        <button type="submit" name="login"class="block w-full py-2 text-center text-white bg-teal-500 border border-teal-500 rounded hover:bg-transparent hover:text-teal-500 transition uppercase font-roboto font-medium">Login</button>
         <div class="flex gap-2 pt-5">
           <p class="text-gray-600 text-sm">Don't have an account?</p><a class="text-gray-600 text-sm underline"
-            href="register.php">Register here</a>
+            href="register">Register here</a>
         </div>
       </div>
     </form>
